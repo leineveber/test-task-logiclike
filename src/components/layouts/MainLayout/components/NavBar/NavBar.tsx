@@ -32,7 +32,7 @@ export const NavBar = ({ className, currentTab, onTabClick, tags }: Props) => {
               value={tag}
               isBlock
               isActive={currentTab === tag}
-              onPress={handleTabClick}
+              onPress={onTabClick}
             >
               {tag}
             </ValueButton>

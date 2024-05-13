@@ -2,7 +2,7 @@ import { EmptyState } from "@/components/common/EmptyState/EmptyState";
 import { ErrorState } from "@/components/common/ErrorState/ErrorState";
 import { LoadingState } from "@/components/common/LoadingState/LoadingState";
 import { CoursesList } from "@/components/features/CoursesList/CoursesList";
-import MainLayout from "@/components/layouts/main/MainLayout";
+import MainLayout from "@/components/layouts/MainLayout/MainLayout";
 import { useCourses } from "@/hooks/useCourses";
 
 export const HomePage = () => {

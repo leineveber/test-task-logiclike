@@ -1,7 +1,7 @@
 import { useCourses } from "@/hooks/useCourses";
 import { Tab, useTabs } from "@/hooks/useTabs";
 import styles from "./MainLayout.module.scss";
-import { NavBar } from "./NavBar/NavBar";
+import { NavBar } from "./components/NavBar/NavBar";
 
 interface Props {
   children: (currentTab: Tab) => React.ReactNode;
