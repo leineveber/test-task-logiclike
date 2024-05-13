@@ -1,12 +1,14 @@
 .main {
   display: flex;
+  align-items: flex-start;
   gap: pxToRem(24px);
-}
+  padding: pxToRem(24px);
 
-.navBar {
-  flex: 0 0 264px;
-}
+  .navBar {
+    flex: 0 0 264px;
+  }
 
-.section {
-  flex: 1 1 auto;
+  .section {
+    flex: 1 1 auto;
+  }
 }

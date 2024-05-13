@@ -5,7 +5,8 @@ import styles from "./MainLayout.module.scss";
 import { NavBar } from "./NavBar/NavBar";
 
 export default function MainLayout({ children }: PropsWithChildren) {
-  const { data, isLoading, tags } = useCourses();
+  const { tags } = useCourses();
+
   const { currentTab, handleTabClick } = useTabs();
 
   return (

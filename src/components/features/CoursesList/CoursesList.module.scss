@@ -1,0 +1,6 @@
+.grid {
+  display: grid;
+  // by the requirements, there are ALWAYS 3 cards. ideally, it's better to implement responsive design using minmax function to define the size of each card
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}

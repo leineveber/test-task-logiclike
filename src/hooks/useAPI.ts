@@ -9,6 +9,7 @@ interface Props<T> {
 
 export const useAPI = <T>({ callback, defaultValue = null }: Props<T>) => {
   const [state, setState] = useState<T | typeof defaultValue>(defaultValue);
+  const [error, setError] = useState<Error | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -21,6 +22,7 @@ export const useAPI = <T>({ callback, defaultValue = null }: Props<T>) => {
       setIsLoading(true);
       fetchData();
     } catch (error) {
+      setError(error as Error);
       console.error(error); // add toast
       throw error;
     } finally {
@@ -31,5 +33,6 @@ export const useAPI = <T>({ callback, defaultValue = null }: Props<T>) => {
   return {
     data: state,
     isLoading,
+    error,
   };
 };

@@ -1,3 +1,4 @@
+import { Course } from "@/api/courses/coursesTypes";
 import { ValueButton } from "@/components/common/ValueButton/ValueButton";
 import classNames from "classnames";
 import styles from "./NavBar.module.scss";
@@ -6,7 +7,7 @@ interface Props {
   className?: string;
   currentTab: string;
   handleTabClick: (tab: string) => void;
-  tags: string[];
+  tags: Course["tags"];
 }
 
 export const NavBar = ({
