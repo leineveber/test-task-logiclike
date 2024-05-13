@@ -18,7 +18,7 @@ export default function MainLayout({ children }: Props) {
         className={styles.navBar}
         tags={tags}
         currentTab={currentTab}
-        handleTabClick={handleTabClick}
+        onTabClick={handleTabClick}
       />
 
       <section className={styles.section}>{children(currentTab)}</section>
