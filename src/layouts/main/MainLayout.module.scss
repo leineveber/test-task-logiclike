@@ -1,0 +1,12 @@
+.main {
+  display: flex;
+  gap: pxToRem(24px);
+}
+
+.navBar {
+  flex: 0 0 264px;
+}
+
+.section {
+  flex: 1 1 auto;
+}

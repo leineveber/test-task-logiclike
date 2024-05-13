@@ -1,0 +1,14 @@
+.btn {
+  padding: $padding-md;
+  border-radius: $border-radius-md;
+  text-align: start;
+
+  &.isActive {
+    background-color: $neutral-green;
+    color: $text-inverse;
+  }
+
+  &.isBlock {
+    width: 100%;
+  }
+}
