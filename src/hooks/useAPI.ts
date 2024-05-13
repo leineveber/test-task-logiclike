@@ -5,6 +5,8 @@ interface Props<T> {
   defaultValue?: T | null;
 }
 
+// I prefer to use React Query for managing the API calls, but since state managers are not allowed, I've created custom hook
+
 export const useAPI = <T>({ callback, defaultValue = null }: Props<T>) => {
   const [state, setState] = useState<T | typeof defaultValue>(defaultValue);
   const [isLoading, setIsLoading] = useState(true);

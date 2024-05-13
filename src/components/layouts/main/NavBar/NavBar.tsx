@@ -1,4 +1,4 @@
-import { ValueButton } from "@/components/ValueButton/ValueButton";
+import { ValueButton } from "@/components/common/ValueButton/ValueButton";
 import classNames from "classnames";
 import styles from "./NavBar.module.scss";
 

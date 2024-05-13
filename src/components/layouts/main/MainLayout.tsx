@@ -1,9 +1,10 @@
 import { useCourses } from "@/hooks/useCourses";
 import { useTabs } from "@/hooks/useTabs";
+import { PropsWithChildren } from "react";
 import styles from "./MainLayout.module.scss";
 import { NavBar } from "./NavBar/NavBar";
 
-export default function MainLayout() {
+export default function MainLayout({ children }: PropsWithChildren) {
   const { data, isLoading, tags } = useCourses();
   const { currentTab, handleTabClick } = useTabs();
 
@@ -16,7 +17,7 @@ export default function MainLayout() {
         handleTabClick={handleTabClick}
       />
 
-      <section className={styles.section}>Main Layout</section>
+      <section className={styles.section}>{children}</section>
     </main>
   );
 }
