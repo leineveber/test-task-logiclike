@@ -1,11 +1,12 @@
 import { Course } from "@/api/courses/coursesTypes";
+import React from "react";
 import styles from "./CourseCard.module.scss";
 
 interface Props {
   course: Course;
 }
 
-export const CourseCard = ({ course }: Props) => {
+export const CourseCard = React.memo(({ course }: Props) => {
   return (
     <article className={styles.wrapper} tabIndex={0} role="button">
       <div
@@ -17,4 +18,4 @@ export const CourseCard = ({ course }: Props) => {
       <div className={styles.textWrapper}>{course.name}</div>
     </article>
   );
-};
+});

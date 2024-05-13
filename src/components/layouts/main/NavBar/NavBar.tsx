@@ -1,12 +1,13 @@
 import { Course } from "@/api/courses/coursesTypes";
 import { ValueButton } from "@/components/common/ValueButton/ValueButton";
+import { defaultTab } from "@/hooks/useTabs";
 import classNames from "classnames";
 import styles from "./NavBar.module.scss";
 
 interface Props {
   className?: string;
-  currentTab: string;
-  handleTabClick: (tab: string) => void;
+  currentTab: Course["tags"][number];
+  handleTabClick: (tab: Course["tags"][number]) => void;
   tags: Course["tags"];
 }
 
@@ -22,8 +23,8 @@ export const NavBar = ({
         <li>
           <ValueButton
             isBlock
-            isActive={currentTab === "all"}
-            value="all"
+            isActive={currentTab === defaultTab}
+            value={defaultTab}
             onPress={handleTabClick}
           >
             Все темы

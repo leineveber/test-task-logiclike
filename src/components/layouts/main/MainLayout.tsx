@@ -1,10 +1,14 @@
+import { Course } from "@/api/courses/coursesTypes";
 import { useCourses } from "@/hooks/useCourses";
 import { useTabs } from "@/hooks/useTabs";
-import { PropsWithChildren } from "react";
 import styles from "./MainLayout.module.scss";
 import { NavBar } from "./NavBar/NavBar";
 
-export default function MainLayout({ children }: PropsWithChildren) {
+interface Props {
+  children: (currentTab: Course["tags"][number]) => React.ReactNode;
+}
+
+export default function MainLayout({ children }: Props) {
   const { tags } = useCourses();
 
   const { currentTab, handleTabClick } = useTabs();
@@ -18,7 +22,7 @@ export default function MainLayout({ children }: PropsWithChildren) {
         handleTabClick={handleTabClick}
       />
 
-      <section className={styles.section}>{children}</section>
+      <section className={styles.section}>{children(currentTab)}</section>
     </main>
   );
 }

@@ -22,7 +22,7 @@ export const HomePage = () => {
 
   return (
     <MainLayout>
-      <CoursesList />
+      {(currentTab) => <CoursesList currentTab={currentTab} />}
     </MainLayout>
   );
 };
