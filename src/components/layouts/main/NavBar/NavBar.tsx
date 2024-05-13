@@ -1,13 +1,13 @@
 import { Course } from "@/api/courses/coursesTypes";
 import { ValueButton } from "@/components/common/ValueButton/ValueButton";
-import { defaultTab } from "@/hooks/useTabs";
+import { Tab, defaultTab } from "@/hooks/useTabs";
 import classNames from "classnames";
 import styles from "./NavBar.module.scss";
 
 interface Props {
   className?: string;
-  currentTab: Course["tags"][number];
-  handleTabClick: (tab: Course["tags"][number]) => void;
+  currentTab: Tab;
+  handleTabClick: (tab: Tab) => void;
   tags: Course["tags"];
 }
 

@@ -1,12 +1,11 @@
-import { Course } from "@/api/courses/coursesTypes";
 import { EmptyState } from "@/components/common/EmptyState/EmptyState";
 import { useCourses } from "@/hooks/useCourses";
-import { defaultTab } from "@/hooks/useTabs";
+import { Tab, defaultTab } from "@/hooks/useTabs";
 import styles from "./CoursesList.module.scss";
 import { CourseCard } from "./components/CourseCard/CourseCard";
 
 interface Props {
-  currentTab: Course["tags"][number];
+  currentTab: Tab;
 }
 
 export const CoursesList = ({ currentTab }: Props) => {
